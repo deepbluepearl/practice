@@ -19,7 +19,7 @@ correct_word = my_word
 view_word = []
 body_parts = 0
 noose = ['head','left_arm','right_arm','body','left_leg','right_leg']
-
+guess_char = ""
 
 # ____
  #|   |
@@ -42,7 +42,7 @@ while body_parts < 6:                                   #start game loop
         print('The word was ' + correct_word)
         break
 
-    guess_char = raw_input("please guess a letter: ")           #getting input
+    guess_char = input("please guess a letter: ")           #getting input
     print('You guessed: ' + guess_char)
 
 
