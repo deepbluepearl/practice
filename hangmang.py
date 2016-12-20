@@ -12,9 +12,9 @@ with open('sowpods.txt','r') as open_file:                      #opening diction
         word_list.append(line.strip())                          #cleaning dictionary
         line = open_file.readline().strip().lower()
 
-my_num = random.randint(0,len(word_list)-1)                      #picking a number at random from the word list
-#my_word = word_list[my_num]
-my_word = 'ted'
+my_num = random.randint(0,len(word_list))                      #picking a number at random from the word list
+my_word = word_list[my_num]
+#my_word = 'ted'
 correct_word = my_word
 view_word = []
 body_parts = 0
@@ -32,6 +32,7 @@ for i in range(len(my_word)):
     view_word.append('_')
 
 while body_parts < 6:                                   #start game loop
+    #print(body_parts)
     if body_parts == 6:
         print('You lose!')
         break
@@ -64,10 +65,12 @@ while body_parts < 6:                                   #start game loop
 
 
     else:
-        body_parts = body_parts + 1
+        print(noose[body_parts])
         spent_letters.append(guess_char)
         print('Try again!')
         print("Your used letters are: " + str(spent_letters))
+        body_parts = body_parts + 1
+
                                                                 #adding guessed letter to total letter count
 
 print('Game over!')
