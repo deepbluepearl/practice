@@ -27,4 +27,16 @@ def string_2s(str_arg):
         return str_arg[0:2] + str_arg[-2:]
     return ""
 
-print(string_2s("ab"))
+def replace_first(str_arg):
+    #replace every char in a string same as first char, with $
+    return str_arg[0] + str_arg[1:].replace(str_arg[0],'$')
+
+def first_switch(str_arg0,str_arg1):
+    return str_arg1[:2] + str_arg0[2:] + ' ' + str_arg0[:2] + str_arg1[2:]
+
+def replace_index(index_arg,str_arg):
+    return str_arg[:index_arg] + str_arg[index_arg+1:]
+
+print(replace_index(2,'helo'))
+# print(string_2s("ab"))
+#print(replace_first('restart'))
